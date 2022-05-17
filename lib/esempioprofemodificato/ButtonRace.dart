@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import './main.dart';
+import './ListClasses.dart';
+
+
+
 
 class ButtonRace extends StatelessWidget {
   String name;
@@ -11,7 +15,17 @@ class ButtonRace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
-      onPressed: () => print("ciao"),
+      //once pressed the system navigate to another screen
+      onPressed: () {
+        Navigator.push(
+          context, 
+          MaterialPageRoute(
+            builder: (
+              (context) => ListClasses(id)
+            )
+          )
+        );
+      },
       style: OutlinedButton.styleFrom(
         primary: Colors.white,
         backgroundColor: const Color.fromARGB(255, 49, 35, 65),
