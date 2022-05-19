@@ -5,8 +5,6 @@ import 'package:app_races/ListRaces.dart';
 import './ButtonRace.dart';
 import 'package:flutter/material.dart';
 
-int index = 0;
-
 
 void main() {
   runApp(MaterialApp(home: MyApp()));
@@ -22,12 +20,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp>{
-  change(int i){
-    setState(){
-      index = i;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
